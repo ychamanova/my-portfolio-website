@@ -1,0 +1,316 @@
+/* variables */
+:root{
+    --primary: rgba(29, 2, 54, 0.863);
+    --secondary: rgb(20, 20, 71);
+}
+
+/* reset */
+body,p,a,ul,li{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* base styles */
+:root{
+    background: url(assets/main.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Alata', sans-serif;
+    
+}
+
+.button{
+    background: none;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.6);
+    display: inline-block;
+}
+.button:hover{
+    color: rgb(7, 24, 37);
+    background: var(--primary);
+}
+
+
+h1,h2,h3,h4 {
+    color: var(--secondary);
+    font-weight: normal;
+}
+
+p,a{
+    color: var(--primary);
+}
+
+h1,h3{
+    font-size: 1.2em;
+}
+h2{
+    font-size: 1.6em;
+}
+
+h4{
+    font-size: 1.1em;
+    padding: 10px;
+    margin: 10px;
+}
+.leading{
+    font-size: 1.1em;
+    color: var(--primary)
+}
+
+.skills {
+    text-align: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    padding: 10px 0;
+}
+
+
+/* mobile styles */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.site-nav {
+    margin: 0 20px;
+}
+
+.site-nav ul{
+    display: none;
+}
+
+.site-nav h1{
+    font-size: 1.8em;
+    font-style: bold;
+    color: var(--primary);
+    grid-column: 1/5;
+    grid-row: 1;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(4, 0, 255);
+    display: inline-block;
+}
+
+
+#welcome p{
+    font-size: 1.2em;
+}
+
+#welcome h2{
+    padding: 0 20px;
+}
+
+.welcome-text{
+    grid-column: 1/6;
+}
+.profile-img{
+    grid-column: 6/8;
+}
+
+.profile-img img{
+    width: 200%;
+    max-width: 400px;
+    border: 3px solid rgba(247, 247, 210, 0.658);
+    border-radius: 50%;
+}
+
+#skills{
+    padding: 30px 20px;
+    background-color: rgba(40, 7, 124, 0.795);
+  }
+
+#skills h3{
+    text-align: center;
+    color: rgb(189, 175, 241);
+}
+
+#skills li{
+    background-color: rgba(179, 159, 253, 0.201);
+    padding: 20px;
+    margin: 20px 0;
+    grid-column: span 4;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+#skills p{
+    text-align: center;
+    margin: 20px;
+}
+
+#skills *{
+      align-self: center;
+}
+
+#skills img{
+      border-radius: 20%;
+}
+
+#experience{
+    padding: 30px 20px;
+    background-color: rgba(96, 111, 247, 0.397);
+}
+
+#experience .leading{
+    text-align: center;
+
+}
+
+#experience ul{
+   text-align: left;
+}
+
+#experience h3{
+    background-color: rgba(242, 239, 252, 0.568);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#contact{
+    padding: 30px 20px;
+    background-color: rgba(241, 134, 236, 0.425);
+}
+
+#contact h3, #contact p{
+    margin-bottom: 0;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+footer{
+    padding: 30px 20px;
+    background-color:rgba(28, 3, 119, 0.945);
+    display: grid;
+}
+
+.copyright{
+    color: rgba(255, 255, 255, 0.708);
+}
+
+#contact a{
+    background-color: rgba(117, 88, 223, 0.488);
+    padding: 0 30px;
+    border-radius: 20px;
+}
+
+#contact a:hover{
+    background-color: rgb(38, 3, 167);
+}
+
+.copyright{
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+
+/* small tablet styles */
+@media screen and (min-width: 620px){
+
+    .welcome-text{
+        grid-column: 1/5;
+    }
+
+    .profile-img{
+        grid-column: 5/8;
+        width: 100%;
+    }
+
+    .skills{
+        margin-top: 40px;
+        padding: 30px 100px;
+    }
+
+    footer{
+        background-size: 20%;
+    }
+    
+
+}
+
+/* large tablet & laptop styles */
+@media screen and (min-width: 960px){
+  
+  .grid{
+      width: 100%;
+      max-width: 1060px;
+      margin: 0 auto;  
+  }
+
+  #welcome{
+    padding: 20px 40px;
+}
+
+#welcome h2{
+    font-size: 40px;
+}
+
+#welcome p{
+    font-size: 20px;
+    padding: 30px 30px 40px 0;
+}
+
+.site-nav ul{
+    display: flex;
+    grid-column: 5/7;
+}
+
+.site-nav li{
+    padding: 30px 50px;
+}
+
+.site-nav a{
+    background-color: rgba(242, 239, 252, 0.568);
+    padding: 10px 20px;
+    border-radius: 60px;
+    min-width: 80px;
+    display: block;
+    text-align: center;
+    line-height: 30px; 
+}
+
+.site-nav a:hover{
+    background-color: rgba(33, 14, 100, 0.363);
+}
+
+#experience{
+    max-width: 1060px;
+    margin: 0 auto; 
+}
+
+}
+
+/* desktop styles */
+@media screen and (min-width: 1200px){
+
+
+  #skills li{
+      grid-column: span 2;
+  }
+
+}
